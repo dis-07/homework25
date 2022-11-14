@@ -1,29 +1,12 @@
-import { NavLink, Outlet } from "react-router-dom";
+import {Outlet } from "react-router-dom";
+
+import Header from "../components/Header";
 
 const Root = () => {
 
     return (
         <div>
-            <header className="header">
-                <NavLink className='home' to='/'>
-                    HOME
-                </NavLink>
-                <nav className="nav">
-                    <ul>
-                        <li>
-                            <NavLink className='users' to='users'>
-                                USERS
-                            </NavLink>
-                        </li>
-                        <li className="li">
-                            <NavLink className='hotels' to='hotels'>
-                                HOTELS
-                            </NavLink>
-                        </li>
-                    </ul>
-                </nav>
-            </header>
-
+            <Header/>
             <Outlet/>
         </div>
     )
